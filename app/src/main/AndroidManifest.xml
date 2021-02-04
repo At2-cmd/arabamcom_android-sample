@@ -3,6 +3,7 @@
     package="com.atakankuloglu.arabamcomsample">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ArabamComSample">
+        <activity android:name=".ui.view.cardetail.CarDetailActivity"></activity>
         <activity android:name=".ui.view.carlist.CarListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,4 +20,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
