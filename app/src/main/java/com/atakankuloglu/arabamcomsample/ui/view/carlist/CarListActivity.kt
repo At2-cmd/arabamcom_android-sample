@@ -1,10 +1,16 @@
 package com.atakankuloglu.arabamcomsample.ui.view.carlist
 
+import ArabalarlarAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.atakankuloglu.arabamcomsample.R
 import com.atakankuloglu.arabamcomsample.databinding.ActivityCarListBinding
+import com.atakankuloglu.arabamcomsample.model.CarModel
+import com.atakankuloglu.arabamcomsample.model.MockList
+
+import kotlinx.android.synthetic.main.activity_car_list.*
 
 class CarListActivity : AppCompatActivity() {
 
@@ -15,6 +21,9 @@ class CarListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setupViewBinding()
         setupViewModel()
+
+        recyclerView1.layoutManager = LinearLayoutManager(this)
+        recyclerView1.adapter = ArabalarlarAdapter(MockList.getMockedArabalarListesi())
 
 
     }
